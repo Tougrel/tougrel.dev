@@ -52,7 +52,7 @@ useSeoMeta({
 			<StructuresFlex column items="center" class="relative p-2 gap-4">
 				<div class="absolute inset-x-0 top-8 h-3 bg-emerald-700 blur-2xl" />
 				<StructuresFlex column items="center" class="gap-1">
-					<Icon name="material-symbols:settings-suggest-outline-rounded" size="3em" class="text-white-full" />
+					<Icon name="mdi:tune" size="3em" class="text-white-full" />
 					<h2 class="text-xl">Customizable</h2>
 				</StructuresFlex>
 				<p class="text-sm text-center text-gray-400 break-words">

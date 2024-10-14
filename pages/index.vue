@@ -21,12 +21,12 @@ const banners = ref<Banner[]>([
 		class: "from-violet-600 to-fuchsia-400",
 		icons: [
 			{
-				name: "carbon:bare-metal-server",
+				name: "mdi:database",
 				size: "8em",
-				classes: "-right-8 -bottom-16 -rotate-[25deg]",
+				classes: "-right-8 -bottom-12 -rotate-[25deg]",
 			},
 			{
-				name: "carbon:data-base",
+				name: "mdi:server",
 				size: "8em",
 				classes: "hidden lg:block left-0 -top-10 rotate-[25deg]",
 			},
