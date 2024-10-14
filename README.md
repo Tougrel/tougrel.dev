@@ -10,15 +10,11 @@ First you need to make sure you install the dependencies. I personally use pnpm 
 pnpm install
 ```
 
-Once everything is done installing you need to make a `.env` file with the following stuff inside:
+Once everything is done installing, you can (if you want) make a `.env` file with the following stuff inside:
 
 ```dotenv
 # You can skip this in case you want to!
 NITRO_PRESET=""
-
-# In case you don't want to use cloudflare analytics you can remove
-# this and the nuxt-cloudflare-analytics package from the project
-CLOUDFLARE_ANALYTICS_TOKEN=""
 ```
 
 Once you are done with the `.env` file you can go ahead and start the development server by running
