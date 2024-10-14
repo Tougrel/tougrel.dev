@@ -1,18 +1,6 @@
 <script setup lang="ts">
 import pkg from "../../package.json";
 
-interface Page {
-	name: string;
-	href: string;
-	hover: string;
-	icon: PageIcon;
-}
-
-interface PageIcon {
-	name: string;
-	color: string;
-}
-
 interface Social {
 	label: string;
 	href: string;
@@ -20,62 +8,6 @@ interface Social {
 	color: string;
 }
 
-const pages = ref<Page[]>([
-	{
-		name: "Dashboard",
-		href: "https://dashboard.tougrel.dev",
-		hover: "hover:text-violet-400",
-		icon: {
-			name: "mdi:view-dashboard",
-			color: "text-violet-500",
-		},
-	},
-	{
-		name: "Projects",
-		href: "/projects",
-		hover: "hover:text-lime-400",
-		icon: {
-			name: "mdi:format-list-bulleted-type",
-			color: "text-lime-500",
-		},
-	},
-	{
-		name: "Gateway",
-		href: "https://sagris.me",
-		hover: "hover:text-yellow-400",
-		icon: {
-			name: "ic:outline-hub",
-			color: "text-yellow-500",
-		},
-	},
-	{
-		name: "Aura",
-		href: "https://bot.auragroup.dev",
-		hover: "hover:text-projects-aura",
-		icon: {
-			name: "mdi:robot-excited-outline",
-			color: "text-projects-aura",
-		},
-	},
-	{
-		name: "SkyCast",
-		href: "https://skycast.gr",
-		hover: "hover:text-sky-400",
-		icon: {
-			name: "mdi:weather-partly-snowy-rainy",
-			color: "text-sky-500",
-		},
-	},
-	{
-		name: "MyUni",
-		href: "https://uni.tougrel.dev",
-		hover: "hover:text-pink-400",
-		icon: {
-			name: "mdi:account-school-outline",
-			color: "text-pink-500",
-		},
-	},
-]);
 const socials = ref<Social[]>([
 	{
 		label: "Contact me via Email",
@@ -118,23 +50,6 @@ const socials = ref<Social[]>([
 
 <template>
 	<StructuresFlex is="footer" column class="gap-6 p-8 max-w-screen-2xl mx-auto">
-		<StructuresGrid :columns="2" :md-columns="3" :lg-columns="6" class="gap-4">
-			<StructuresFlex
-				v-for="page in pages"
-				router
-				row
-				items="center"
-				:to="page.href"
-				:class="[page.hover]"
-				class="lg:justify-center gap-2 md:gap-4 transition-colors cursor-pointer"
-			>
-				<StructuresFlex justify="center" items="center" class="bg-background-900 rounded-lg p-2">
-					<Icon :name="page.icon.name" size="1.5em" :class="[page.icon.color]" />
-				</StructuresFlex>
-				<span class="md:text-lg font-bold">{{ page.name }}</span>
-			</StructuresFlex>
-		</StructuresGrid>
-
 		<div class="p-0.5 w-full bg-[length:400%] bg-gradient animate-footerLine rounded-full" />
 
 		<StructuresFlex row wrap justify="between" class="gap-4">
