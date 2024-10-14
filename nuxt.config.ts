@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 		preset: process.env.NITRO_PRESET || "node",
 	},
 
-	modules: ["@nuxt/fonts", "@nuxt/devtools", "@nuxt/ui", "@nuxt/icon", "nuxt-cloudflare-analytics"],
+	modules: ["@nuxt/fonts", "@nuxt/devtools", "@nuxt/ui", "@nuxt/icon"],
 
 	runtimeConfig: {
 		public: {},
@@ -20,9 +20,5 @@ export default defineNuxtConfig({
 		experimental: {
 			processCSSVariables: true,
 		},
-	},
-
-	cloudflareAnalytics: {
-		token: process.env.CLOUDFLARE_ANALYTICS_TOKEN,
 	},
 });

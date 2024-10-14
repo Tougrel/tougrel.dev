@@ -69,9 +69,9 @@ useSeoMeta({
 						: new Date().getUTCFullYear() - 2002
 				}}
 				years old</span
-			>) and I’m from Greece. I love programming, gaming, anime and I’m a big fan of J. R. R Tolkien’s work. My
-			main focus is backend development but I spend a lot of time on frontend development too! I’m currently
-			working on some projects that you can find below.
+			>) and I’m from Greece. I love programming, gaming, anime and I’m a big fan of J. R. R Tolkien’s work. I'm a
+			fullstack engineer but I spend a lot of time on frontend development too! I’m currently working on some
+			projects that you can find below.
 		</p>
 	</StructuresFlex>
 	<StructuresFlex :row="true" :wrap="true" class="gap-4 py-12">
