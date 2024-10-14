@@ -21,4 +21,11 @@ export default defineNuxtConfig({
 			processCSSVariables: true,
 		},
 	},
+
+	icon: {
+		clientBundle: {
+			scan: true,
+			sizeLimitKb: 256,
+		},
+	},
 });
