@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 		preset: process.env.NITRO_PRESET || "node",
 	},
 
-	modules: ["@nuxt/fonts", "@nuxt/devtools", "@nuxt/ui", "@nuxt/icon"],
+	modules: ["@nuxt/fonts", "@nuxt/devtools", "@nuxt/ui", "@nuxt/icon", "nuxt-delay-hydration"],
 
 	runtimeConfig: {
 		public: {},
@@ -27,5 +27,10 @@ export default defineNuxtConfig({
 			scan: true,
 			sizeLimitKb: 256,
 		},
+	},
+
+	delayHydration: {
+		debug: process.env.NODE_ENV === "development",
+		mode: "mount",
 	},
 });
