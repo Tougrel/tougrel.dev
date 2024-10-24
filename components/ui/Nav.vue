@@ -13,28 +13,11 @@ const routes = [
 ];
 
 const mobileMenu = useState("mobile-menu");
-const appsMenu = ref(false);
 </script>
 
 <template>
 	<StructuresFlex is="header" row items="center" justify="between" class="p-8 w-full max-w-screen-2xl mx-auto">
-		<StructuresFlex
-			is="button"
-			row
-			items="center"
-			@click="appsMenu = !appsMenu"
-			type="button"
-			class="gap-1"
-			:class="{ 'z-[60]': appsMenu }"
-		>
-			<img src="/logo.svg" width="128" height="64" alt="Tougrel" decoding="async" loading="lazy" />
-			<Icon
-				name="mdi:chevron-down"
-				size="2em"
-				:class="{ 'rotate-180': appsMenu }"
-				class="transition-transform duration-300"
-			/>
-		</StructuresFlex>
+		<img src="/logo.svg" width="128" height="64" alt="Tougrel" decoding="async" loading="lazy" />
 
 		<Icon name="mdi:menu" size="2em" @click="mobileMenu = !mobileMenu" class="sm:!hidden" />
 		<StructuresFlex is="nav" row items="center" class="hidden sm:flex gap-4">
@@ -68,7 +51,6 @@ const appsMenu = ref(false);
 			</StructuresFlex>
 		</StructuresFlex>
 	</UModal>
-	<UiNavMenu @close="appsMenu = false" :is-open="appsMenu" />
 </template>
 
 <style scoped lang="scss">
