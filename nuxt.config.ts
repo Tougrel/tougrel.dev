@@ -8,6 +8,16 @@ export default defineNuxtConfig({
 
 	modules: ["@nuxt/fonts", "@nuxt/devtools", "@nuxt/ui", "@nuxt/icon", "nuxt-delay-hydration"],
 
+	vite: {
+		css: {
+			preprocessorOptions: {
+				scss: {
+					api: "modern-compiler",
+				},
+			},
+		},
+	},
+
 	runtimeConfig: {
 		public: {},
 	},
