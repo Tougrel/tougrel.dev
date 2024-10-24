@@ -52,6 +52,16 @@ const banners = ref<Banner[]>([
 		],
 	},
 ]);
+const age = computed(() => {
+	const date = new Date();
+	const birthday = new Date("2002-05-28");
+
+	if (birthday.setUTCFullYear(date.getUTCFullYear()) >= Date.now()) {
+		return date.getUTCFullYear() - 2003;
+	} else {
+		return date.getUTCFullYear() - 2002;
+	}
+});
 
 useSeoMeta({
 	title: "Home",
@@ -62,15 +72,10 @@ useSeoMeta({
 	<StructuresFlex :header="true" :column="true" class="gap-2 py-12">
 		<h1 class="text-4xl text-white font-bold">👋 Hello there!</h1>
 		<p class="text-gray-400 text-sm md:text-base font-medium">
-			I’m Lampros or Tougrel (<span class="text-violet-300 italic"
-				>{{
-					new Date("2002-05-28").setUTCFullYear(new Date().getUTCFullYear()) >= Date.now()
-						? new Date().getUTCFullYear() - 2002 - 1
-						: new Date().getUTCFullYear() - 2002
-				}}
-				years old</span
+			I’m Lampros or Tougrel (<span class="text-violet-300 italic">
+				<ClientOnly>{{ age }}</ClientOnly> years old</span
 			>) and I’m from Greece. I love programming, gaming, anime and I’m a big fan of J. R. R Tolkien’s work. I'm a
-			fullstack engineer but I spend a lot of time on frontend development too! I’m currently working on some
+			fullstack engineer but I spend a lot of time on frontend development! I’m currently working on some
 			projects that you can find below.
 		</p>
 	</StructuresFlex>
